@@ -1,1 +1,49 @@
-<advanced-video [cldVid]="vid" controls></advanced-video>
+<mat-accordion multi>
+    <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Settings
+            </mat-panel-title>
+            <mat-panel-description>
+
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div>
+            <div>
+                <span>Width</span>
+                <mat-slider min="1" max="2500" showTickMarks discrete [displayWith]="formatLabel">
+                    <input matSliderThumb [(ngModel)]="width">
+                </mat-slider>
+            </div>
+            <div>
+                <span>Height</span>
+                <mat-slider min="1" max="2500" showTickMarks discrete [displayWith]="formatLabel">
+                    <input lap matSliderThumb [(ngModel)]="height">
+                </mat-slider>
+            </div>
+        </div>
+
+        <div>
+            <mat-checkbox [(ngModel)]="rounded">Rounded</mat-checkbox>
+            @if(rounded) { <input type="number" [(ngModel)]="radius"> }
+        </div>
+        <button mat-raised-button (click)="applyTrasformnation()">Apply Changes</button>
+
+
+    </mat-expansion-panel>
+    <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Image Panel
+            </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar></div>
+            </mat-card-header>
+        <advanced-video [cldVid]="vid" controls></advanced-video>
+
+        </mat-card>
+    </mat-expansion-panel>
+</mat-accordion>
