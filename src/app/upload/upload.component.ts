@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 declare global {
-  let cloudinary: any;
+  var cloudinary: any;
 }
 @Component({
   selector: 'app-upload',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './upload.component.html',
   styleUrl: './upload.component.scss',
 })
 export class UploadComponent {
-  cloudName = 'hzxyensd5'; // replace with your own cloud name
-  uploadPreset = 'aoh4fpwm'; // replace with your own upload preset
+  cloudName = 'dv9bvcs0a'; // replace with your own cloud name
+  uploadPreset = 'zibijpyg'; // replace with your own upload preset
   myWidget;
 
   ngOnInit() {
