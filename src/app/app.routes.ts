@@ -19,4 +19,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./upload/upload.component').then((m) => m.UploadComponent),
   },
+  {
+    path: '',
+    redirectTo: 'upload',
+    pathMatch: 'full'
+  }
 ];
