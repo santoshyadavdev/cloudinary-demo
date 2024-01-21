@@ -35,6 +35,9 @@ export class VideosComponent {
   rounded = false;
   radius = 0;
 
+  formatLabel(value: number): string {
+    return `${value}px`;
+  }
   constructor(private readonly cludinaryService: CloudinaryService) {}
 
   ngOnInit() {
